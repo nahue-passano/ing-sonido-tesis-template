@@ -1,0 +1,274 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper]{geometry}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+% \usepackage{fontspec}
+\usepackage{graphicx}
+\usepackage{times}
+\usepackage{tipa}
+\usepackage{amsmath}
+\usepackage{setspace}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{lipsum}
+\usepackage{parskip}
+\usepackage[backend=biber, style=apa]{biblatex}
+\addbibresource{bibliografia.bib}
+\usepackage{caption}
+\usepackage{floatrow}
+\usepackage{titlesec}
+\usepackage{titletoc}
+\usepackage{appendix}
+\usepackage{tabularray}
+\usepackage{tocloft} 
+\usepackage{physics}
+\usepackage{changepage}
+\usepackage[hidelinks]{hyperref} % eliminar rectangulos rojos en los links
+
+\usepackage{titlesec}
+\titleformat{\section}
+  {\normalfont\fontsize{16}{16}\bfseries}{\thesection .}{0.5ex}{}
+\titleformat{\subsection}
+  {\normalfont\fontsize{14}{14}\bfseries}{\thesubsection .}{0.5ex}{}
+\titleformat{\subsubsection}
+  {\normalfont\fontsize{14}{14}\bfseries}{\thesubsubsection.}{0.5ex}{}
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+%-----------------CONFIGURACION-------------------------------
+
+% Configuracion de la Pagina 
+\geometry{
+    a4paper,
+    total={21cm,29.7cm},
+    left=3cm,
+    top=2.5cm,
+    right=2.5cm,
+    bottom=2.5cm }
+
+\setstretch{1.5} %Interlineado a 1.5
+\setlength{\parindent}{1cm} %Sangría de cada nuevo párrafo a 1cm
+
+% Configuración del pie de página
+\fancyfoot[C]{\rule{\textwidth}{0.4pt}\\ \hspace*{\fill}\fontsize{12pt}{14pt}\selectfont Desarrollo de sistema automático de audiolibros con voces de la cultura argentina. \hspace*{\fill}\thepage} 
+
+%\setlength{\footskip}{1.02 cm}
+\setlength{\footskip}{0.5 cm}
+\pagestyle{fancy} % Establecer el estilo de página como 'fancy'
+
+\fancyhead{} % Limpiar encabezado
+\renewcommand{\headrulewidth}{0pt} % Eliminar la línea de encabezado
+
+\DefineBibliographyStrings{spanish}{ % Redefinir la cadena de texto para Bibliografía
+  references = {BIBLIOGRAFÍA}, % <-- Aquí cerramos correctamente la definición}
+
+% Configuración global de las descripciones de las figuras
+\captionsetup[figure]{labelsep=period}
+% Configuración global de las descripciones de las tablas
+\floatsetup[table]{capposition=top}
+\captionsetup[table]{labelsep=period}
+
+% Personalización del formato del índice de figuras
+\renewcommand{\cftfigpresnum}{Figura }
+\renewcommand{\cftfigaftersnum}{.}
+\setlength{\cftfignumwidth}{4em}
+
+% Personalización del formato del índice de tablas
+\renewcommand{\cfttabpresnum}{Tabla }
+\renewcommand{\cfttabaftersnum}{.}
+\setlength{\cfttabnumwidth}{4em}
+
+% Personalizar el formato del índice general
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}} % Agrega puntos entre el título de la sección y el número de página
+\renewcommand{\cftsecfont}{\bfseries} % Establece la fuente del título de la sección en el índice como negrita
+\renewcommand{\cftsecpagefont}{\bfseries} % Establece la fuente de la página de la sección en el índice como negrita
+
+
+% Definir el espaciado entre sections y subsections
+\titlespacing*{\subsection}{1cm}{*1.5}{*1}
+
+% Definir el espaciado entre subsections y subsubsections
+\titlespacing*{\subsubsection}{1.5cm}{*1.5}{*1}
+
+\usepackage{fontspec}
+\setromanfont[
+BoldFont=Calibri Bold.TTF,
+ItalicFont=Calibri Italic.ttf,
+BoldItalicFont=Calibri Bold Italic.ttf,
+]{Calibri Regular.ttf}
+
+\begin{document}
+
+%-------------------------- PORTADA -----------------
+\begin{titlepage}
+\centering
+\includegraphics[width=13.58cm, height=3.1cm]{Logo Untref.png} 
+
+\vspace{0.1cm}
+
+\hspace*{-1.31cm}% Espacio horizontal de 1.31cm desde el borde izquierdo de la hoja
+\begin{minipage}[t]{16cm}
+\centering
+\framebox[17.13cm][c]{\parbox{18.13cm}{\centering{\fontsize{16pt}{1.5pt}\selectfont INGENIERÍA DE SONIDO}}}
+\vspace{0.5cm} % Espacio vertical entre el recuadro y el texto siguiente
+
+\end{minipage}
+
+
+\vspace{36pt}
+
+{\bfseries\fontsize{22pt}{18pt} \selectfont Desarrollo de sistema automático de audiolibros con voces de la cultura argentina. \par}
+
+\vspace{42pt}
+
+% {\itshape\fontsize{18pt}{24pt}\selectfont \textbf{Subtítulo de la tesis (si lo tuviera)} \par}
+
+\vspace{64pt}
+
+{\centering\itshape\fontsize{14pt}{1pt}\selectfont Tesis final presentada para obtener el título de Ingeniero\par}
+{\centering\itshape\fontsize{14pt}{1pt}\selectfont de Sonido de la Universidad Nacional de Tres de Febrero \par}
+{\centering\itshape\fontsize{14pt}{1pt}\selectfont (UNTREF) \par}
+
+\vspace{70pt}
+
+{\bfseries\fontsize{14pt}{0pt}\selectfont TESISTA: Nahuel Passano (DNI: 40.910.030) \par}
+{\bfseries\fontsize{14pt}{0pt}\selectfont TUTOR: Ing. Leonardo Pepino \par}
+{\bfseries\fontsize{14pt}{0pt}\selectfont COTUTOR: Ing. Ignacio Mieza \par}
+
+\vfill
+
+\begin{table}[h]
+\hrulefill \\ 
+\begin{tabular}{c}
+Fecha de defensa: mes y año $\lvert$ Locación: Buenos Aires, Argentina \\
+\end{tabular}
+\end{table}
+\hrule
+\end{titlepage}
+
+\newpage
+\thispagestyle{empty} % Página en blanco sin número de página, encabezado ni pie de página
+\mbox{} % Contenido de la página en blanco
+\newpage
+
+%---------------------------------------------------------------
+% CUERPO DEL DOCUMENTO
+% Centrar título de sección
+
+\pagenumbering{roman} % Comienza la numeración de página en números romanos
+\setcounter{page}{2} % Establece el número de página según sea necesario
+\setcounter{secnumdepth}{4}
+%-----------------Agradecimientos-----------------
+\newpage 
+\thispagestyle{plain} 
+% \section*{AGRADECIMIENTOS} % Título centrado
+\input{sections/0.1.agradecimientos}
+
+\clearpage
+
+\newpage
+\thispagestyle{plain} % Página en blanco sin número de página, encabezado ni pie de página
+\mbox{} % Contenido de la página en blanco
+\newpage
+
+%-----------------Estado del Arte-----------------
+\newpage
+\thispagestyle{plain} 
+% \section*{DEDICATORIA} 
+\input{sections/0.2.dedicatoria}
+
+
+%------------------Indices------------------------
+\newpage
+\renewcommand{\contentsname}{ÍNDICE DE CONTENIDOS}
+\tableofcontents   % Índice General
+\listoffigures  % Índice de Figuras
+\listoftables   % Índice de Tablas 
+
+
+%------------------Resumen------------------------
+
+\newpage
+\thispagestyle{plain} 
+% \section*{\centering RESUMEN} 
+\addcontentsline{toc}{section}{RESUMEN} % Agregar RESUMEN al índice
+\input{sections/0.3.resumen}
+% \end{titlepage}
+
+%------------------Abstrac------------------------
+
+\newpage
+\thispagestyle{plain} 
+% \section*{\centering ABSTRACT} 
+\addcontentsline{toc}{section}{ABSTRACT} % Agregar ABSTRACT al índice
+\input{sections/0.4.abstract}
+
+
+
+%-----------------Introducción-----------------
+\clearpage % Asegúrate de que la sección de introducción comience en una nueva página
+\pagenumbering{arabic} % Restaurar numeración arábiga
+\section{INTRODUCCIÓN} 
+\input{sections/1.introduccion}
+
+
+\clearpage
+
+
+
+%-----------------Marco Teorico-----------------
+\newpage
+\section{MARCO TEÓRICO Y ESTADO DEL ARTE} 
+    \input{sections/2.marco_teorico_estado_del_arte}
+
+% %-----------------Estado del Arte-----------------
+% \newpage
+% \section{ESTADO DEL ARTE} 
+%     \input{sections/Estado del Arte}
+
+%-----------------Desarrollo de la herramienta-----------------
+\newpage
+\section{DESARROLLO DE LA HERRAMIENTA} 
+    \input{sections/3.desarrollo}
+
+%-----------------Evaluación de la herramienta-----------------
+\newpage
+\section{EVALUACIÓN DE LA HERRAMIENTA DISEÑADA} 
+    \input{sections/4.evaluacion}
+
+%-----------------Validación-----------------
+\newpage
+\section{VALIDACIÓN DE LA EVALUACIÓN SUBJETIVA} 
+    \input{sections/5.validacion}
+
+%-----------------Análisis de resultados-----------------
+\newpage
+\section{ANÁLISIS DE RESULTADOS} 
+    \input{sections/6.analisis_de_resultados}
+
+%-----------------Conclusiones-----------------
+\newpage
+\section{CONCLUSIONES} 
+    \input{sections/7.conclusiones}
+
+%-----------------Linea futuras de Invetigacion-----------------
+\newpage
+\section{LÍNEAS FUTURAS DE INVESTIGACIÓN} 
+    \input{sections/8.lineas_futuras}
+
+%-----------------Bibliografia-----------------
+\newpage
+
+% \bibliography{bibliografia}
+\printbibliography[title={Bibliografia}]
+
+%-----------------ANEXO-----------------
+% \newpage
+% \appendix
+% \section*{ANEXO I. \quad FORMATO INTERNO} 
+%     \input{sections/z.anexo}
+\end{document}
+
