@@ -24,6 +24,7 @@
 \usepackage{tocloft} 
 \usepackage{physics}
 \usepackage{changepage}
+\usepackage[table]{xcolor}
 \usepackage[hidelinks]{hyperref} % eliminar rectangulos rojos en los links
 
 \usepackage{titlesec}
@@ -53,7 +54,7 @@
 \setlength{\parindent}{1cm} %Sangría de cada nuevo párrafo a 1cm
 
 % Configuración del pie de página
-\fancyfoot[C]{\rule{\textwidth}{0.4pt}\\ \hspace*{\fill}\fontsize{12pt}{14pt}\selectfont Desarrollo de sistema automático de audiolibros con voces de la cultura argentina. \hspace*{\fill}\thepage} 
+\fancyfoot[C]{\rule{\textwidth}{0.4pt}\\ \hspace*{\fill}\fontsize{12pt}{14pt}\selectfont Desarrollo de un sistema automático de audiolibros con prosodia rioplatense. \hspace*{\fill}\thepage} 
 
 %\setlength{\footskip}{1.02 cm}
 \setlength{\footskip}{0.5 cm}
@@ -120,7 +121,7 @@ BoldItalicFont=Calibri Bold Italic.ttf,
 
 \vspace{36pt}
 
-{\bfseries\fontsize{22pt}{18pt} \selectfont Desarrollo de sistema automático de audiolibros con voces de la cultura argentina. \par}
+{\bfseries\fontsize{22pt}{18pt} \selectfont Títutlo de la tesis \par}
 
 \vspace{42pt}
 
@@ -134,9 +135,9 @@ BoldItalicFont=Calibri Bold Italic.ttf,
 
 \vspace{70pt}
 
-{\bfseries\fontsize{14pt}{0pt}\selectfont TESISTA: Nahuel Passano (DNI: 40.910.030) \par}
-{\bfseries\fontsize{14pt}{0pt}\selectfont TUTOR: Ing. Leonardo Pepino \par}
-{\bfseries\fontsize{14pt}{0pt}\selectfont COTUTOR: Ing. Ignacio Mieza \par}
+{\bfseries\fontsize{14pt}{0pt}\selectfont TESISTA: Nombre y Apellido (DNI número) \par}
+{\bfseries\fontsize{14pt}{0pt}\selectfont TUTOR: Nombre y Apellido (Ing., PhD, etc.) \par}
+{\bfseries\fontsize{14pt}{0pt}\selectfont COTUTOR: Nombre y Apellido (Ing., PhD, etc.) \par}
 
 \vfill
 
@@ -240,9 +241,9 @@ Fecha de defensa: mes y año $\lvert$ Locación: Buenos Aires, Argentina \\
     \input{sections/4.evaluacion}
 
 %-----------------Validación-----------------
-\newpage
-\section{VALIDACIÓN DE LA EVALUACIÓN SUBJETIVA} 
-    \input{sections/5.validacion}
+% \newpage
+% \section{VALIDACIÓN DE LA EVALUACIÓN SUBJETIVA} 
+%     \input{sections/5.validacion}
 
 %-----------------Análisis de resultados-----------------
 \newpage
@@ -263,7 +264,7 @@ Fecha de defensa: mes y año $\lvert$ Locación: Buenos Aires, Argentina \\
 \newpage
 
 % \bibliography{bibliografia}
-\printbibliography[title={Bibliografia}]
+\printbibliography[title={Bibliografía}]
 
 %-----------------ANEXO-----------------
 % \newpage
