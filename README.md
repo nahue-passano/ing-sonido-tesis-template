@@ -8,3 +8,7 @@ A la hora de construir este template participaron:
 
 ---
 Para visualizar el PDF se debe utilizar el compilador XeLaTeX. Desde Overleaf se modifica en Menu -> Settings -> Compiler
+
+<p align="center">
+  <img src="overleaf-compiler.png" alt="" width="500"/>
+</p>
